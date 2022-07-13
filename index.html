@@ -8,7 +8,7 @@
     <title>Slider Captcha Demo</title>
     <link href="https://3nhat.github.io/CSS/font-awesome.min.css" rel="stylesheet">
     <link href="https://3nhat.github.io/CSS/slidercaptcha.min.css" rel="stylesheet" />
-    <script src="https://3nhat.github.io/JS/slidercaptcha.js"></script>
+    
     <style>
 
         .slidercaptcha {
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    
+    <script src="https://3nhat.github.io/JS/slidercaptcha.js"></script>
     <script>
         var captcha = sliderCaptcha({
             id: 'captcha',
@@ -68,6 +68,20 @@
                     captcha.reset();
                 }, 500);
             }
+        });
+        var captcha = sliderCaptcha({
+            width: 280,
+            height: 155,
+            PI: Math.PI,
+            sliderL: 42,
+            sliderR: 9,
+            offset: 5,
+            loadingText:'Loading...',
+            failedText:'Try It Again',
+            barText:'Slide the Puzzle',
+            repeatIcon:'fa fa-repeat',
+            maxLoadCount: 3
+
         });
     </script>
 </body>
