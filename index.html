@@ -83,6 +83,43 @@
             maxLoadCount: 3
 
         });
+        
+var captcha = sliderCaptcha({
+
+    verify:function (arr, url) {
+
+      var ret =false;
+
+      fetch(url, {
+
+          method:'post',
+
+          headers: {
+
+              'Accept':'application/json',
+
+              'Content-Type':'application/json'
+
+          },
+
+          body: JSON.stringify(arr)
+
+      }).then(function (result) {
+
+          ret = result;
+
+      });
+
+      return ret;
+
+    },
+
+    remoteUrl:"api/Captcha"
+
+});
+
+
+
     </script>
 </body>
 
