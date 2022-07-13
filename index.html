@@ -69,54 +69,7 @@
                 }, 500);
             }
         });
-        var captcha = sliderCaptcha({
-            width: 280,
-            height: 155,
-            PI: Math.PI,
-            sliderL: 42,
-            sliderR: 9,
-            offset: 5,
-            loadingText:'Loading...',
-            failedText:'Try It Again',
-            barText:'Slide the Puzzle',
-            repeatIcon:'fa fa-repeat',
-            maxLoadCount: 3
 
-        });
-        
-var captcha = sliderCaptcha({
-
-    verify:function (arr, url) {
-
-      var ret =false;
-
-      fetch(url, {
-
-          method:'post',
-
-          headers: {
-
-              'Accept':'application/json',
-
-              'Content-Type':'application/json'
-
-          },
-
-          body: JSON.stringify(arr)
-
-      }).then(function (result) {
-
-          ret = result;
-
-      });
-
-      return ret;
-
-    },
-
-    remoteUrl:"api/Captcha"
-
-});
 
 
 
